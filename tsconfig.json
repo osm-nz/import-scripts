@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["es2021"],
+    "strict": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true
+  },
+  "include": ["scripts"]
+}
