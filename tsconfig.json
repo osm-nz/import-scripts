@@ -3,6 +3,7 @@
     "noEmit": true,
     "lib": ["es2021"],
     "strict": true,
+    "jsx": "react",
     "downlevelIteration": true,
     "esModuleInterop": true
   },
