@@ -103,7 +103,6 @@ async function processHuts(): Promise<DocTagMap> {
       // these tags are on every feature
       operator: "Department of Conservation",
       "operator:wikidata": "Q1191417",
-      "operator:wikipedia": "en:Department of Conservation (New Zealand)",
       tourism: "wilderness_hut",
 
       name,
@@ -165,7 +164,6 @@ async function processCampsites(): Promise<DocTagMap> {
       // these tags are on every feature
       operator: "Department of Conservation",
       "operator:wikidata": "Q1191417",
-      "operator:wikipedia": "en:Department of Conservation (New Zealand)",
       tourism: "camp_site",
 
       name: C.name.trim(),
@@ -173,7 +171,6 @@ async function processCampsites(): Promise<DocTagMap> {
 
       website: C.staticLink.replace(".aspx", "").replace("www.", ""),
       reservation: { Yes: "required", No: "no" }[C.bookable],
-      description: C.introduction.trim(),
       backcountry: C.campsiteCategory === "Backcountry" ? "yes" : undefined,
 
       "capacity:tents": `${C.numberOfUnpoweredSites}`,
@@ -230,13 +227,11 @@ async function processLodges(): Promise<DocTagMap> {
       // these tags are on every feature
       operator: "Department of Conservation",
       "operator:wikidata": "Q1191417",
-      "operator:wikipedia": "en:Department of Conservation (New Zealand)",
       tourism: "wilderness_hut",
 
       name: L.name.trim(),
       "ref:doc": L.assetId,
       website: L.webPage.replace(".aspx", "").replace("www.", ""),
-      description: L.introduction.trim(),
 
       // this data is not available from the API v1, nor from API v2, nor from GIS
       // - bookable
